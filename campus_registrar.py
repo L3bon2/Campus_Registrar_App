@@ -43,7 +43,7 @@ def load_students():
     with open("students.csv", newline="") as f:
         redone = csv.DictReader(f)
         for row in redone:
-            print("DEBUG student row:", row)   # <--- DEBUG PRINT
+            print("DEBUG student row:", row)
             try:
                 sid = int(row["student_id"])
                 students[sid] = {
@@ -52,9 +52,9 @@ def load_students():
                     "gpa": float(row["gpa"])
                 }
             except Exception as e:
-                print("DEBUG error:", e)       # <--- DEBUG PRINT
+                print("DEBUG error:", e)
                 continue
-    print("DEBUG loaded students:", students) # <--- DEBUG PRINT
+    print("DEBUG loaded students:", students)
     return students
 
 # Save the students dictionary back into students.csv
