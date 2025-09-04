@@ -35,7 +35,7 @@ def load_students():
         with open("students.csv", "w", newline="") as f:
             writer = csv.writer(f)
             writer.writerow(["student_id", "full_name", "year", "gpa"])
-            writer.writerow([1003, "Grace Hopper", 3, 4.0])
+            writer.writerow([1003, "Grace Hopper", 3, 3.0])
             writer.writerow([1004, "John von Neumann", 2, 3.8])
             writer.writerow([1005, "Marie Curie", 4, 3.6])
 
