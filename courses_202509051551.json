@@ -1,0 +1,10 @@
+{
+  "CS301": {
+    "title": "Algorithms",
+    "credits": 4,
+    "capacity": 3,
+    "prereqs": [
+      "CS201"
+    ]
+  }
+}

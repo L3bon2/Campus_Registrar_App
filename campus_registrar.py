@@ -35,7 +35,7 @@ def load_students():
         with open("students.csv", "w", newline="") as f:
             writer = csv.writer(f)
             writer.writerow(["student_id", "full_name", "year", "gpa"])
-            writer.writerow([1003, "Grace Hopper", 3, 3.0])
+            writer.writerow([1003, "Grace Hopper", 3, 4.0])
             writer.writerow([1004, "John von Neumann", 2, 3.8])
             writer.writerow([1005, "Marie Curie", 4, 3.6])
 
@@ -43,7 +43,7 @@ def load_students():
     with open("students.csv", newline="") as f:
         redone = csv.DictReader(f)
         for row in redone:
-            print("DEBUG student row:", row)
+          #  print("DEBUG student row:", row)   # <--- DEBUG PRINT
             try:
                 sid = int(row["student_id"])
                 students[sid] = {
@@ -52,9 +52,9 @@ def load_students():
                     "gpa": float(row["gpa"])
                 }
             except Exception as e:
-                print("DEBUG error:", e)
+                #print("DEBUG error:", e)       # <--- DEBUG PRINT
                 continue
-    print("DEBUG loaded students:", students)
+    #print("DEBUG loaded students:", students) # <--- DEBUG PRINT
     return students
 
 # Save the students dictionary back into students.csv
@@ -283,6 +283,7 @@ def main():
         print("10. Exit")
 
         choice = input("Choose an option: ")
+        
 
         if choice == "1":
             list_students()

@@ -1,0 +1,18 @@
+{
+  "CS301": {
+    "title": "Algorithms",
+    "credits": 4,
+    "capacity": 3,
+    "prereqs": [
+      "CS201"
+    ]
+  },
+  "CS401": {
+    "title": "Operating Systems",
+    "credits": 4,
+    "capacity": 2,
+    "prereqs": [
+      "CS201"
+    ]
+  }
+}
